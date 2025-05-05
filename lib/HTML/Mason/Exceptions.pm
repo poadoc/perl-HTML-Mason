@@ -116,11 +116,13 @@ sub rethrow_exception
     my ($err) = @_;
     return unless $err;
 
-    if ( UNIVERSAL::can($err, 'rethrow') ) {
-        $err->rethrow;
-    }
-    elsif ( ref $err ) {
-        die $err;
+    if ( ref $err ) {
+        if ( UNIVERSAL::can($err, 'rethrow') ) {
+            $err->rethrow;
+        }
+        else {
+            die $err;
+        }
     }
     HTML::Mason::Exception->throw(error => $err);
 }
