@@ -1,8 +1,10 @@
 package HTML::Mason;
+# git description: v1.55-2-g3c9481a
+
 # Copyright (c) 1998-2005 by Jonathan Swartz. All rights reserved.
 # This program is free software; you can redistribute it and/or modify it
 # under the same terms as Perl itself.
-
+$HTML::Mason::VERSION = '1.56';
 use 5.006;
 
 use HTML::Mason::Interp;
@@ -20,7 +22,9 @@ __END__
 
 =pod
 
-=encoding UTF-8
+=head1 VERSION
+
+version 1.56
 
 =head1 SYNOPSIS
 
@@ -30,20 +34,6 @@ __END__
         SetHandler perl-script
         PerlHandler HTML::Mason::ApacheHandler
     </Location>
-
-=head1 WAIT - HAVE YOU SEEN MASON 2?
-
-Version 1 of Mason (this distribution) -- has been around since 1998, is in
-wide use, and is very stable. However it has not changed much in years and
-is no longer actively developed.
-
-Version 2 of Mason -- L<Mason> -- was released in February of 2011. It is more
-actively developed and has a much more modern architecture. If you are just
-starting out, we recommend you give Mason 2 a try.
-
-For a summary of differences between Mason 1 and 2 see
-
-    http://www.openswartz.com/2011/02/21/announcing-mason-2/
 
 =head1 DESCRIPTION
 
@@ -100,6 +90,22 @@ Beyond this trivial example, components can also embed serious chunks
 of Perl code (say, to pull records from a database). They can also
 call other components, cache results for later reuse, and perform all
 the tricks you expect from a regular Perl program.
+
+=encoding UTF-8
+
+=head1 WAIT - HAVE YOU SEEN MASON 2?
+
+Version 1 of Mason (this distribution) -- has been around since 1998, is in
+wide use, and is very stable. However it has not changed much in years and
+is no longer actively developed.
+
+Version 2 of Mason -- L<Mason> -- was released in February of 2011. It is more
+actively developed and has a much more modern architecture. If you are just
+starting out, we recommend you give Mason 2 a try.
+
+For a summary of differences between Mason 1 and 2 see
+
+    http://www.openswartz.com/2011/02/21/announcing-mason-2/
 
 =head1 INSTALLATION
 
@@ -194,5 +200,62 @@ Bugs and feature requests will be tracked at RT:
 
     http://rt.cpan.org/NoAuth/Bugs.html?Dist=HTML-Mason
     bug-html-mason@rt.cpan.org
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Jonathan Swartz <swartz@pobox.com>
+
+=item *
+
+Dave Rolsky <autarch@urth.org>
+
+=item *
+
+Ken Williams <ken@mathforum.org>
+
+=back
+
+=head1 CONTRIBUTORS
+
+=for stopwords Ævar Arnfjörð Bjarmason Alex Vandiver John Williams Kevin Falcone Patrick Kane Ricardo Signes
+
+=over 4
+
+=item *
+
+Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+
+=item *
+
+Alex Vandiver <alex@chmrr.net>
+
+=item *
+
+John Williams <jwilliams@cpan.org>
+
+=item *
+
+Kevin Falcone <falcone@bestpractical.com>
+
+=item *
+
+Patrick Kane <modus-cpan@pr.es.to>
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 1998 - 2014 by Jonathan Swartz.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

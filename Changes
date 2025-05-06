@@ -2,8 +2,6 @@ Revision history for HTML::Mason.
 
 ** denotes an incompatible change
 
-{{$NEXT}}
-
 1.56     2014-11-14
 
     [ BUG FIXES ]
